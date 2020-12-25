@@ -11,7 +11,6 @@ from django.views.generic import TemplateView
 {%- if cookiecutter.use_drf == 'y' %}
 from rest_framework.authtoken.views import obtain_auth_token
 {%- endif %}
-from
 
 from {{cookiecutter.project_slug}} import __version__ as current_version
 
