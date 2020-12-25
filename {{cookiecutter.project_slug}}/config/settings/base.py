@@ -82,6 +82,8 @@ THIRD_PARTY_APPS = [
     "rest_framework.authtoken",
     "corsheaders",
 {%- endif %}
+    'import_export',
+    'rolepermissions',
 ]
 
 LOCAL_APPS = [
@@ -332,3 +334,10 @@ CORS_URLS_REGEX = r"^/api/.*$"
 {%- endif %}
 # Your stuff...
 # ------------------------------------------------------------------------------
+LANGUAGES = (
+    ('en', _('English')),
+    ('es', _('Spanish')),
+)
+
+ENVIRONMENT_NAME = env('ENVIRONMENT_NAME', default='DEVELOPMENT')
+ENVIRONMENT_ADMIN_CSS = env('ENVIRONMENT_ADMIN_CSS', default='css/admin-dev.css')

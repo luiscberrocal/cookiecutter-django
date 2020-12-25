@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.utils.translation import ugettext_lazy as _
 {%- if cookiecutter.use_async == 'y' %}
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 {%- endif %}
@@ -10,6 +11,13 @@ from django.views.generic import TemplateView
 {%- if cookiecutter.use_drf == 'y' %}
 from rest_framework.authtoken.views import obtain_auth_token
 {%- endif %}
+from
+
+from {{cookiecutter.project_slug}} import __version__ as current_version
+
+admin.site.site_header = _("{{cookiecutter.project_name}} v{}".format(current_version))
+admin.site.site_title = _("{{cookiecutter.project_name}} Portal v{}".format(current_version))
+admin.site.index_title = _("Welcome to {{cookiecutter.project_name}} Portal")
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
