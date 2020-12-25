@@ -15,7 +15,7 @@ Full instructions follow, but here's a high-level view.
 
 2. Set your config variables in the *postactivate* script
 
-3. Run the *manage.py* ``migrate`` and ``collectstatic`` commands
+3. Run the *manage.py* ``migrate`` and ``collectstatic`` {%- if cookiecutter.use_compressor == "y" %}and ``compress`` {%- endif %}commands
 
 4. Add an entry to the PythonAnywhere *Web tab*
 
@@ -29,13 +29,13 @@ Once you've been through this one-off config, future deployments are much simple
 Getting your code and dependencies installed on PythonAnywhere
 --------------------------------------------------------------
 
-Make sure your project is fully commited and pushed up to Bitbucket or Github or wherever it may be.  Then, log into your PythonAnywhere account, open up a **Bash** console, clone your repo, and create a virtualenv:
+Make sure your project is fully committed and pushed up to Bitbucket or Github or wherever it may be.  Then, log into your PythonAnywhere account, open up a **Bash** console, clone your repo, and create a virtualenv:
 
 .. code-block:: bash
 
     git clone <my-repo-url>  # you can also use hg
     cd my-project-name
-    mkvirtualenv --python=/usr/bin/python3.6 my-project-name
+    mkvirtualenv --python=/usr/bin/python3.8 my-project-name
     pip install -r requirements/production.txt  # may take a few minutes
 
 
@@ -109,6 +109,7 @@ Now run the migration, and collectstatic:
     source $VIRTUAL_ENV/bin/postactivate
     python manage.py migrate
     python manage.py collectstatic
+    {%- if cookiecutter.use_compressor == "y" %}python manage.py compress {%- endif %}
     # and, optionally
     python manage.py createsuperuser
 
@@ -153,7 +154,7 @@ Back on the Web tab, hit **Reload**, and your app should be live!
 
 
 **NOTE:** *you may see security warnings until you set up your SSL certificates. If you
-want to supress them temporarily, set DJANGO_SECURE_SSL_REDIRECT to blank.  Follow
+want to suppress them temporarily, set DJANGO_SECURE_SSL_REDIRECT to blank.  Follow
 the instructions here to get SSL set up: https://help.pythonanywhere.com/pages/SSLOwnDomains/*
 
 
@@ -175,6 +176,7 @@ For subsequent deployments, the procedure is much simpler.  In a Bash console:
     git pull
     python manage.py migrate
     python manage.py collectstatic
+    {%- if cookiecutter.use_compressor == "y" %}python manage.py compress {%- endif %}
 
 And then go to the Web tab and hit **Reload**
 
