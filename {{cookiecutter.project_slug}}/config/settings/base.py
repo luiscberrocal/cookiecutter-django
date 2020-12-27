@@ -308,7 +308,12 @@ ACCOUNT_AUTHENTICATION_METHOD = "username"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_EMAIL_REQUIRED = True
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
+{% if cookiecutter.allow_suscritpion == 'y' -%}
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+{%- else %}
+ACCOUNT_EMAIL_VERIFICATION = "none"
+{%- endif %}
+
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_ADAPTER = "{{cookiecutter.project_slug}}.users.adapters.AccountAdapter"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
