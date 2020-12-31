@@ -1,6 +1,8 @@
 from django.conf import settings
+from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.utils.translation import ugettext_lazy as _
 {%- if cookiecutter.use_async == 'y' %}
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 {%- endif %}
@@ -11,7 +13,14 @@ from django.views.generic import TemplateView
 from rest_framework.authtoken.views import obtain_auth_token
 {%- endif %}
 
-urlpatterns = [
+from {{cookiecutter.project_slug}} import __version__ as current_version
+
+admin.site.site_header = _("{{cookiecutter.project_name}} v{}".format(current_version))
+admin.site.site_title = _("{{cookiecutter.project_name}} Portal v{}".format(current_version))
+admin.site.index_title = _("Welcome to {{cookiecutter.project_name}} Portal")
+
+urlpatterns = []
+urlpatterns += i18n_patterns(
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
@@ -22,7 +31,7 @@ urlpatterns = [
     path("users/", include("{{ cookiecutter.project_slug }}.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 {%- if cookiecutter.use_async == 'y' %}
 if settings.DEBUG:
     # Static file serving when using Gunicorn + Uvicorn for local web socket development

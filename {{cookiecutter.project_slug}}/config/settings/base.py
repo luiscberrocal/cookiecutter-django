@@ -4,10 +4,14 @@ Base settings to build other settings files upon.
 from pathlib import Path
 
 import environ
+from django.utils.translation import ugettext_lazy as _
+
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 # {{ cookiecutter.project_slug }}/
 APPS_DIR = ROOT_DIR / "{{ cookiecutter.project_slug }}"
+
+TEST_OUTPUT_PATH = ROOT_DIR / "output"
 env = environ.Env()
 
 READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
@@ -82,6 +86,8 @@ THIRD_PARTY_APPS = [
     "rest_framework.authtoken",
     "corsheaders",
 {%- endif %}
+    'import_export',
+    'rolepermissions',
 ]
 
 LOCAL_APPS = [
@@ -302,7 +308,12 @@ ACCOUNT_AUTHENTICATION_METHOD = "username"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_EMAIL_REQUIRED = True
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
+{% if cookiecutter.allow_suscription == 'y' -%}
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+{%- else %}
+ACCOUNT_EMAIL_VERIFICATION = "none"
+{%- endif %}
+
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_ADAPTER = "{{cookiecutter.project_slug}}.users.adapters.AccountAdapter"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
@@ -332,3 +343,10 @@ CORS_URLS_REGEX = r"^/api/.*$"
 {%- endif %}
 # Your stuff...
 # ------------------------------------------------------------------------------
+LANGUAGES = (
+    ('en', _('English')),
+    ('es', _('Spanish')),
+)
+
+ENVIRONMENT_NAME = env('ENVIRONMENT_NAME', default='DEVELOPMENT')
+ENVIRONMENT_ADMIN_CSS = env('ENVIRONMENT_ADMIN_CSS', default='css/admin-dev.css')
