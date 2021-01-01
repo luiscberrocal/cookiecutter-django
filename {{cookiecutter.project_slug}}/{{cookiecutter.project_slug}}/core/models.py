@@ -2,7 +2,7 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
-from django_countries.fields import CountryField
+#from django_countries.fields import CountryField
 from model_utils.models import TimeStampedModel
 
 
@@ -33,7 +33,7 @@ class Human(TimeStampedModel):
     national_id = models.CharField('National id', max_length=50)
     national_id_type = models.CharField(_('National id type'), max_length=20,
                                         choices=NATIONAL_ID_TYPE_CHOICES, default=NATIONAL_ID)
-    country_for_id = CountryField(_('Country for id'))
+    #country_for_id = CountryField(_('Country for id'))
     picture = models.ImageField(_('Picture'), null=True, blank=True)
     date_of_birth = models.DateField(_('Date of birth'), null=True, blank=True)
     blood_type = models.CharField('Blood type', max_length=4, null=True, blank=True)
