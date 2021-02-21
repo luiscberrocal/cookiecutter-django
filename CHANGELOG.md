@@ -3,6 +3,120 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 <!-- GENERATOR_PLACEHOLDER -->
 
+## [2021-02-16]
+### Updated
+- Update sentry-sdk to 0.20.2 ([#3054](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3054))
+- Update sphinx to 3.5.0 ([#3053](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3053))
+
+## [2021-02-13]
+### Updated
+- Update sentry-sdk to 0.20.1 ([#3052](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3052))
+
+## [2021-02-12]
+### Updated
+- Update pre-commit to 2.10.1 ([#3045](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3045))
+- Update sentry-sdk to 0.20.0 ([#3051](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3051))
+
+## [2021-02-10]
+### Updated
+- Bump peter-evans/create-pull-request from v3.8.1 to v3.8.2 ([#3049](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3049))
+
+## [2021-02-08]
+### Updated
+- Update django-extensions to 3.1.1 ([#3047](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3047))
+- Bump peter-evans/create-pull-request from v3.8.0 to v3.8.1 ([#3046](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3046))
+
+## [2021-02-06]
+### Changed
+- Removed Redundant test_case_sensitivity() and made test_not_authenticated() get the LOGIN_URL dynamically. ([#3041](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3041))
+- Refactored users.forms to make the code more readeable ([#3029](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3029))
+- Update django to 3.0.12 ([#3037](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3037))
+### Updated
+- Update tox to 3.21.4 ([#3044](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3044))
+
+## [2021-02-01]
+### Updated
+- Update pytz to 2021.1 ([#3035](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3035))
+- Update jinja2 to 2.11.3 ([#3033](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3033))
+- Bump peter-evans/create-pull-request from v3.7.0 to v3.8.0 ([#3034](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3034))
+
+## [2021-01-31]
+### Changed
+- Adding local celery instructions to developing-locally ([#3031](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3031))
+### Updated
+- Update django-crispy-forms to 1.11.0 ([#3032](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3032))
+
+## [2021-01-28]
+### Updated
+- Update pre-commit to 2.10.0 ([#3028](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3028))
+- Update django-anymail to 8.2 ([#3027](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3027))
+- Update tox to 3.21.3 ([#3026](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3026))
+
+## [2021-01-26]
+### Changed
+- Bump peter-evans/create-pull-request from v3.6.0 to v3.7.0 ([#3022](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3022))
+- Using SuccessMessageMixin to send success message to django template ([#3021](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3021))
+### Fixed
+- Update admin to ignore *_name User attributes ([#3018](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3018))
+### Updated
+- Update coverage to 5.4 ([#3024](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3024))
+- Update pytest to 6.2.2 ([#3020](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3020))
+- Update django-cors-headers to 3.7.0 ([#3019](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3019))
+
+## [2021-01-24]
+### Changed
+- Use defer for script tags (Fix #2922) ([#2927](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2927))
+- Made Traefik conf much easier to understand and improved redirect res… ([#2838](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2838))
+- Sentry Redis integration enabled by default in production. ([#2989](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2989))
+- Add test for UserUpdateView.form_valid() ([#2949](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2949))
+### Fixed
+- Omit first_name and last_name in User model ([#2998](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2998))
+### Updated
+- Update django-celery-beat to 2.2.0 ([#3009](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3009))
+- Update pyyaml to 5.4.1 ([#3011](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3011))
+- Update mypy to 0.800 ([#3013](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3013))
+- Update factory-boy to 3.2.0 ([#2986](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2986))
+- Update tox to 3.21.2 ([#3010](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3010))
+
+## [2021-01-22]
+### Changed
+- Use self.request.user instead of second query ([#3012](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3012))
+
+## [2021-01-14]
+### Updated
+- Update tox to 3.21.1 ([#3006](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3006))
+
+## [2021-01-10]
+### Updated
+- Update pylint-django to 2.4.2 ([#3003](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3003))
+- Update tox to 3.21.0 ([#3002](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3002))
+
+## [2021-01-08]
+### Changed
+- Upgrade Travis to Focal ([#2999](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2999))
+### Updated
+- Update pylint-django to 2.4.1 ([#3001](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3001))
+- Update sphinx to 3.4.3 ([#3000](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/3000))
+- Update pylint-django to 2.4.0 ([#2996](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2996))
+
+## [2021-01-04]
+### Updated
+- Update isort to 5.7.0 ([#2988](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2988))
+- Update uvicorn to 0.13.3 ([#2987](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2987))
+- Auto-update pre-commit hooks ([#2990](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2990))
+- Update sphinx to 3.4.2 ([#2995](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2995))
+- Update pillow to 8.1.0 ([#2993](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2993))
+
+## [2020-12-29]
+### Updated
+- Update pygithub to 1.54.1 ([#2982](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2982))
+- Update django-storages to 1.11.1 ([#2981](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2981))
+
+## [2020-12-26]
+### Updated
+- Update sphinx to 3.4.1 ([#2985](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2985))
+- Update pytz to 2020.5 ([#2984](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2984))
+
 ## [2020-12-23]
 ### Changed
 - Bump peter-evans/create-pull-request from v3.5.2 to v3.6.0 ([#2980](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2980))
