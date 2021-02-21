@@ -14,6 +14,7 @@ from rest_framework.authtoken.views import obtain_auth_token
 {%- endif %}
 
 from {{cookiecutter.project_slug}} import __version__ as current_version
+from {{ cookiecutter.project_slug }}.core.api.views import app_data
 
 admin.site.site_header = _("{{cookiecutter.project_name}} v{}".format(current_version))
 admin.site.site_title = _("{{cookiecutter.project_name}} Portal v{}".format(current_version))
@@ -44,6 +45,7 @@ urlpatterns += [
     path("api/", include("config.api_router")),
     # DRF auth token
     path("auth-token/", obtain_auth_token),
+    path('api/v1/app-data/', app_data, name='app_data'),
 ]
 {%- endif %}
 
