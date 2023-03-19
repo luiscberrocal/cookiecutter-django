@@ -3,6 +3,12 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 <!-- GENERATOR_PLACEHOLDER -->
 
+## [2023-03-18]
+### Updated
+- Update drf-spectacular to 0.26.1 ([#4221](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/4221))
+- Update pygithub to 1.58.1 ([#4220](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/4220))
+- Update pre-commit to 3.2.0 ([#4219](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/4219))
+
 ## [2023-03-14]
 ### Updated
 - Update django-celery-beat to 2.5.0 ([#4208](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/4208))
