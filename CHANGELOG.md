@@ -3,6 +3,24 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 <!-- GENERATOR_PLACEHOLDER -->
 
+## [2026-11-04]
+### Changed
+- Bump sphinx from 9.1.0 to 9.2.0 ([#7054](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/7054))
+- Bump tox from 4.66.0 to 4.67.5 ([#7052](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/7052))
+- Bump pytest from 9.1.1 to 9.2.0 ([#7050](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/7050))
+- Bump tox-uv from 1.37.0 to 1.37.3 ([#7048](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/7048))
+### Updated
+- Bump traefik from v3.7.14 to v3.7.16 ([#7011](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/7011))
+- Update psycopg to 3.3.8 ([#7056](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/7056))
+- Bump postcss from 8.5.30 to 8.5.32 ([#7055](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/7055))
+- Bump webpack-dev-server from 6.0.0 to 6.1.0 ([#7053](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/7053))
+- Bump sass-loader from 17.0.1 to 17.1.0 ([#7051](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/7051))
+- Bump autoprefixer from 10.6.1 to 10.6.2 ([#7049](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/7049))
+- Bump @babel/core from 8.0.7 to 8.0.10 in the babel group ([#7047](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/7047))
+- Update djlint to 1.49.9 ([#7046](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/7046))
+- Update django-allauth to 65.21.1 ([#7023](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/7023))
+- Update django-ninja to 1.7.3 ([#7019](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/7019))
+
 ## [2026-11-03]
 ### Changed
 - Bump filelock from 3.25.0 to 4.2.1 ([#7007](https://api.github.com/repos/cookiecutter/cookiecutter-django/pulls/7007))
